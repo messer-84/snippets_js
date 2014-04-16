@@ -1,14 +1,39 @@
-function collapsing_filters() {
-	var $trigger = $('.js_filters_control');
+function collapsing_block(trigger, parent, block_toggle) {
+	var $trigger = $(trigger),
+		$parent = $(parent),
+		$block_toggle = $(block_toggle);
+
 	$trigger.on('click', function () {
-		var $list = $trigger.closest('.filters_hold').find('.filters_list');
-		if ($list.hasClass('open')) {
-			$list.removeClass('open').slideUp(500);
-			$trigger.text('Развернуть список');
+		var $this = $(this),
+			$block = $this.closest($parent).find($block_toggle);
+
+		if ($block.hasClass('open')) {
+			$block.removeClass('open').slideUp(500);
+			$this.text('Читать дальше');
 		}
 		else {
-			$list.addClass('open').slideDown(500);
-			$trigger.text('Свернуть список');
+			$block.addClass('open').slideDown(500);
+			$this.text('Свернуть');
 		}
+		return false;
+	})
+}
+
+function collapsing_block_v2(trigger, parent, block_toggle) {
+	var $trigger = $(trigger),
+		$parent = $(parent),
+		$block_toggle = $(block_toggle);
+
+	$trigger.on('click', function () {
+		var $this = $(this),
+			$block = $this.closest($parent).find($block_toggle);
+
+		if ($block.hasClass('open')) {
+			$block.removeClass('open').slideUp(500);
+		}
+		else {
+			$block.addClass('open').slideDown(500);
+		}
+		return false;
 	})
 }
