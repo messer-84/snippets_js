@@ -1,0 +1,14 @@
+function collapsing_filters() {
+	var $trigger = $('.js_filters_control');
+	$trigger.on('click', function () {
+		var $list = $trigger.closest('.filters_hold').find('.filters_list');
+		if ($list.hasClass('open')) {
+			$list.removeClass('open').slideUp(500);
+			$trigger.text('Развернуть список');
+		}
+		else {
+			$list.addClass('open').slideDown(500);
+			$trigger.text('Свернуть список');
+		}
+	})
+}
