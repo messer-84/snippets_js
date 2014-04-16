@@ -1,0 +1,12 @@
+function move_to_block(block, control) {
+	var $block = $(block),
+		$block_pos = $block.offset(),
+		$control = $(control);
+
+	$control.on('click', function () {
+		$('body,html').animate({
+			scrollTop: $block_pos.top - 80
+		}, 800);
+		return false;
+	})
+}
