@@ -1,9 +1,10 @@
 function move_to_block(block, control) {
 	var $block = $(block),
-		$block_pos = $block.offset(),
 		$control = $(control);
 
 	$control.on('click', function () {
+		var $block_pos = $block.offset();
+
 		$('body,html').animate({
 			scrollTop: $block_pos.top - 80
 		}, 800);
