@@ -1,0 +1,15 @@
+function checked_ie(parent) {
+	var $parent = $(parent),
+		$label = $parent.find('.lbl_rad');
+
+	$label.on('click', function () {
+		if ($(this).hasClass('checked')) {
+
+		}
+		else {
+			$label.removeClass('checked');
+			$(this).addClass('checked');
+
+		}
+	});
+}
