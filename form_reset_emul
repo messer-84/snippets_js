@@ -1,0 +1,7 @@
+function form_reset() {
+	var $reset = $('.js_form_reset');
+	$reset.on('click', function () {
+		$('.inp_reset').trigger('click');
+
+	});
+}
