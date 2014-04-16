@@ -1,0 +1,11 @@
+function my_countdown() {
+	var $year = 2014;
+	var $month = 4;
+	var $day = 29;
+	var $hour = 20;
+	var $min = 0;
+
+	$month--;
+	var $date = new Date($year, $month, $day, $hour, $min);
+	$(".countdown").countdown({until: $date, format: "d,H,M,S"})
+}
