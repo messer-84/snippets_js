@@ -1,0 +1,5 @@
+function tabs() {
+	$('dt.tabs_lbl').on('click', function () {
+		$(this).siblings().removeClass('selected').end().next('dd.tabs_hold').andSelf().addClass('selected');
+	});
+}
