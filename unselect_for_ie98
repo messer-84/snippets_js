@@ -1,0 +1,5 @@
+function unselect(){
+	$('.ch_lbl').each(function(){
+		$(this).attr("unselectable", "on");
+	})
+}
