@@ -1,3 +1,6 @@
+$(function () {
+	event_item_height('.event_item');
+});
 function event_item_height(itemClass) {
 	var currentTallest = 0,
 		currentRowStart = 0,
