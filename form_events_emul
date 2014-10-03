@@ -1,0 +1,10 @@
+function form_reset_emul(){
+	$('.form_reset_v1').on('click', function(){
+		$(this).closest('form')[0].reset();
+	})
+}
+function form_submit_emul(){
+	$('.form_submit_v1').on('click', function(){
+		$(this).closest('form')[0].submit();
+	})
+}
