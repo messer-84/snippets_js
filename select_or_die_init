@@ -1,0 +1,8 @@
+function select_styling(select_class, myClass) {
+	var $select = $(select_class);
+	if ($select.length) {
+		$select.selectOrDie({
+			customClass: myClass
+		});
+	}
+}
