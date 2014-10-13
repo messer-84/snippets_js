@@ -1,0 +1,8 @@
+function vert_tabs() {
+	$(".newslider-vertical").sliderkit({
+		shownavitems: 8,
+		verticalnav: true,
+		navitemshover: false,
+		circular: true
+	});
+}
