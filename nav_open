@@ -1,0 +1,6 @@
+function nav_open() {
+	$('.js_control_1').on('click', function () {
+		$('.aux_nav').toggleClass('open');
+		$('header').toggleClass('nav_open');
+	});
+}
