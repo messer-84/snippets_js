@@ -1,0 +1,18 @@
+function side_box() {
+	$('.btn_side').on('click', function () {
+		if ($(this).closest('.side_panel').hasClass('active')) {
+			$(this).closest('.side_panel').removeClass('active');
+			$('.side_panel_background').fadeOut(700);
+		}
+		else {
+			$(this).closest('.side_panel').addClass('active');
+			$('.side_panel_background').fadeIn(700);
+
+		}
+
+	});
+	$('.side_panel_background').on('click', function () {
+		$('.side_panel').removeClass('active');
+		$(this).fadeOut(700);
+	})
+}
