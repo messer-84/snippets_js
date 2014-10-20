@@ -1,0 +1,9 @@
+function addingItem(listClass) {
+	var countItems = $(listClass).children('li').length;
+	if (countItems % 2) {
+		// если количестов li нечетное добавляем li
+		listClass.append('<li></li>');
+	}
+	alert(countItems);
+
+}
