@@ -1,0 +1,7 @@
+//Код для генерации случайного целого от min to max включительно:
+var rand = min + Math.floor(Math.random() * ((max) + 1 - min));
+
+// проверка на число
+function isNumber(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
