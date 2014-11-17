@@ -1,3 +1,4 @@
+http://jsfiddle.net/y584krf0/1/
 $(function () {
 	event_item_height('.event_item');
 });
