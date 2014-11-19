@@ -2,11 +2,12 @@ http://jsfiddle.net/y584krf0/1/
 $(function () {
 	event_item_height('.event_item');
 });
-function event_item_height(itemClass) {
 	var currentTallest = 0,
 		currentRowStart = 0,
 		rowDivs = new Array();
 		columnConform();
+function event_item_height(itemClass) {
+
 
 	function setConformingHeight(el, newHeight) {
 		// set the height to something new, but remember the original height in case things change
