@@ -1,0 +1,20 @@
+function collapsingBlocksMod(control, parent, block_collapse) {
+	var $ctrl = $(control),
+		$parent = $(parent);
+
+	$ctrl.on('click', function () {
+		var $this = $(this),
+			$block_collapse = $this.closest($parent).find($(block_collapse));
+
+		if ($this.hasClass('open')) {
+			$block_collapse.removeClass('open');
+			$this.removeClass('open');
+
+		}
+		else {
+			$block_collapse.addClass('open');
+			$this.addClass('open');
+		}
+		return false;
+	});
+}
