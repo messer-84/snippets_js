@@ -1,0 +1,18 @@
+function categoriesAccordeon() {
+	$('.ctg_item_title').on('click', function () {
+		var objThis = $(this);
+		var showBlock = objThis.closest('.ctg_m_item').find('.ctg_i_content');
+		if(showBlock.length){
+			if (objThis.hasClass('active')) {
+				showBlock.stop().slideUp();
+				objThis.removeClass('active');
+			}
+			else {
+				showBlock.stop().slideDown();
+				objThis.addClass('active');
+			}
+			return false;
+		}
+
+	})
+}
