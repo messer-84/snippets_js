@@ -1,0 +1,19 @@
+
+function scroll_f() {
+    $scroll_top = $(document).scrollTop();
+
+    if ($fullHeader
+		&& $scroll_top > $nav_indent
+		&& $scroll_top_curr < $scroll_top
+	) {
+        body_var.addClass("scroll_mod");
+        $fullHeader = false;
+    }
+    else if(!$fullHeader
+			&& $scroll_top_curr > $scroll_top
+	) {
+        body_var.removeClass("scroll_mod");
+        $fullHeader = true;
+    }
+	$scroll_top_curr = $scroll_top;
+}
