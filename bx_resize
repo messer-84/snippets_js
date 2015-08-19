@@ -1,0 +1,30 @@
+
+var window_w,
+    breakpoint_custom_1 = 800,
+    $slider_2 = false;
+
+$(window).on('load', function(){
+    profile_slider();
+});
+
+$(window).on('resize', function(){
+    profile_slider();
+});
+
+function profile_slider() {
+    if (window_w < breakpoint_custom_1 && !$slider_2) {
+
+        $slider_2 = $('.js_profile_slider').bxSlider({
+            mode: 'fade',
+            pager: false,
+            controls: true,
+            prevText: "",
+            nextText: ""
+        });
+    }
+    else if(window_w > breakpoint_custom_1 && $slider_2) {
+
+        $slider_2.destroySlider();
+        $slider_2 = false;
+    }
+}
