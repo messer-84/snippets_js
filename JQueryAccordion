@@ -1,0 +1,17 @@
+(function($) {
+  var allPanels = $(".nav-lv2");
+  var controls = $(".main-nav > li");
+
+  controls.on("click", function(e) {
+    e.preventDefault();
+    var that = $(this);
+
+    if (that.hasClass("open")) {
+      that.removeClass("open").find('.nav-lv2').slideUp();
+    } else {
+      controls.removeClass("open");
+      allPanels.slideUp();
+      that.addClass("open").find('.nav-lv2').slideDown();
+    }
+  });
+})(jQuery);
